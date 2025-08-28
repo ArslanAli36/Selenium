@@ -1,0 +1,63 @@
+package Assignment;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.JavascriptExecutor;
+
+public class Apply_now {
+
+	public static void main(String[] args) {
+		
+		WebDriver driver= new ChromeDriver();
+		driver.get("https://pf.com.pk/");
+		driver.manage().window().maximize();
+		
+		driver.findElement(By.className("applynow_btn")).click();
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("window.scrollBy(0, 350)", "");
+  
+	    driver.findElement(By.linkText("https://pf.com.pk/job/mid-level-sqa-engineer/")).click();
+	    
+	    js.executeScript("window.scrollBy(0, 350)", "");
+	    
+	    
+	    driver.findElement(By.cssSelector("input[value='Male']")).click();
+	    
+	    driver.findElement(By.id("dob")).sendKeys("1551995");
+	    driver.findElement(By.id("name")).sendKeys("Arslan Ali");
+	    driver.findElement(By.id("email")).sendKeys("arslan.ali.sqa@gmail.com");
+	    driver.findElement(By.id("cnic")).sendKeys("3520290786752");
+	    driver.findElement(By.id("phone")).sendKeys("03281427144");
+	    driver.findElement(By.id("address")).sendKeys("7-A Tech Society Canal Bank Lahore");
+	    driver.findElement(By.id("city")).sendKeys("Lahore");
+	    driver.findElement(By.id("qualification")).click();
+	    driver.findElement(By.cssSelector("option[value='BSCS']")).click();
+	    
+	    driver.findElement(By.id("yr-of-comp")).click();
+	    driver.findElement(By.cssSelector("option[value='2017']")).click();
+	    
+	    driver.findElement(By.id("university")).sendKeys("National University of Computer and Emerging Sciences");
+	    driver.findElement(By.id("cgpa_cd")).sendKeys("3.09");
+	    driver.findElement(By.cssSelector("input[name='cur-working' value ='Yes']")).click();
+	    
+	    driver.findElement(By.id("salry-expt")).sendKeys("100000");
+	    driver.findElement(By.id("doj")).sendKeys("772024");
+	    driver.findElement(By.cssSelector("input[name='hear-about-us']")).click();
+	    driver.findElement(By.id("experiance")).click();
+	    driver.findElement(By.cssSelector("option[value='2 Years']")).click();
+	    
+	    driver.findElement(By.cssSelector("input[id='resume']")).sendKeys("");
+	    driver.findElement(By.cssSelector("input[id='submit-btn']")).click();
+	    
+	    
+	    
+	}
+
+}
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+package Pages;
+import org.openqa.selenium.support.PageFactory;
+import org.eclipse.jetty.util.annotation.*;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+import Pages.TestBase;
+
+public class youtube_page extends TestBase{
+	
+	
+	@FindBy(xpath="")
+	WebElement text_input;
+	
+	@FindBy(xpath="")
+	WebElement search_button;
+	
+	@FindBy(xpath="")
+	WebElement first_link;
+	
+	
+	public youtube_page() {                       // constructor
+		PageFactory.initElements(driver,this);
+		
+	}
+	
+	public String verifyHomePageTitle() {  
+		
+		return driver.getTitle();
+	}
+	
+    public void enterURL("url"){  
+		
+		return driver.get("url");
+	}
+	
+	
+	public void enterSearchData() {
+			
+		
+	}
+	
+	public void clickOnSearch() {
+		
+		
+	}
+	
+       public void clickOnFirstLink() {
+		
+	}
+	
+	
+}

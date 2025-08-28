@@ -1,0 +1,10 @@
+package pages;
+
+class LNE_congres {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

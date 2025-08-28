@@ -1,0 +1,124 @@
+package pages;
+
+import org.openqa.selenium.By;
+
+import org.openqa.selenium.WebDriver;
+
+import org.openqa.selenium.WebElement;
+
+import org.openqa.selenium.support.FindBy;
+
+import org.openqa.selenium.support.PageFactory;
+
+public class LNE_articles{
+
+   // assets, organic, body, management, man, brands, job, nails, health_medicine, technology, testimonials, trends, face 
+
+    WebDriver driver;
+
+    @FindBy(id="1")
+    WebElement assets;
+
+    @FindBy(id="27")
+    WebElement organic;    
+
+    @FindBy(id="17")
+    WebElement body;
+
+    @FindBy(id ="22")
+    WebElement management;
+    
+    @FindBy(id="36")
+    WebElement man;
+    
+    @FindBy(id="37")
+    WebElement brands;
+  
+    @FindBy(id="6")
+    WebElement job;
+
+    @FindBy(id="38")
+    WebElement nails;
+
+    @FindBy(id="14")
+    WebElement health_medicine;
+    
+    @FindBy(id="15")
+    WebElement technology;
+    
+    @FindBy(id="41")
+    WebElement testimonials;
+    
+    @FindBy(id="39")
+    WebElement trends;
+    
+    @FindBy(id="40")
+    WebElement face;
+
+    public LNE_articles(WebDriver driver){
+
+        this.driver = driver;
+
+        //This initElements method will create all WebElements
+
+        PageFactory.initElements(driver, this);
+
+    }
+
+    
+    public void select_assets(){
+
+       assets.click();
+    }
+   
+    
+    public void select_item(String option){
+
+        WebElement item = "option";
+    	item.click();
+    }
+  
+   
+
+    public void setPassword(String strPassword){
+
+   // user_password.sendKeys(strPassword);
+
+    }
+
+   
+
+    public void clickLogin(){
+
+    //        login.click();
+
+    }  
+
+    //Get the title of Login Page
+
+    public String getLoginTitle(){
+
+    	return "here";
+   
+   //     return titleText.getText();
+
+    }
+
+    /**
+
+     * This POM method will be exposed in test case to login in the application
+
+     * @param strUserName
+
+     * @param strPasword
+
+     * @return
+
+     */
+
+    public void loginToLNE(String strUserName,String strPasword){
+
+ 
+    }
+
+}

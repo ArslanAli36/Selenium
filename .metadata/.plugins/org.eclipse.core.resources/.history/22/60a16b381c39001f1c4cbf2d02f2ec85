@@ -1,0 +1,38 @@
+package Assignment;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.Select;
+
+public class Home_page {
+
+	public static void main(String[] args) {
+		
+		WebDriver driver= new ChromeDriver();
+		driver.get("https://pf.com.pk/");
+		driver.manage().window().maximize();
+		
+		driver.findElement(By.linkText("About Us")).click();
+		driver.findElement(By.linkText("Careers")).click();
+		driver.findElement(By.linkText("Open Positions")).click();
+		driver.findElement(By.linkText("Send Resume")).click();
+		
+		driver.findElement(By.linkText("Life at PF")).click();
+		driver.findElement(By.linkText("Expertise")).click();
+		driver.findElement(By.linkText("Resources")).click();
+		driver.findElement(By.linkText("Blogs")).click();
+		driver.findElement(By.linkText("News")).click();
+		
+		driver.findElement(By.linkText("Graduate Gateway Program")).click();
+		driver.findElement(By.className("applynow_btn")).click();
+		driver.findElement(By.cssSelector("img[title = 'Logo']")).click();
+		
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+	       
+		js.executeScript("window.scrollBy(0, 350)", "");
+		
+	}
+
+}

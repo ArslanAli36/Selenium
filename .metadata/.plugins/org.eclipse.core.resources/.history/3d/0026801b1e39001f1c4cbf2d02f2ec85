@@ -1,0 +1,49 @@
+package Assignment;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.JavascriptExecutor;
+
+public class Apply_now {
+
+	public static void main(String[] args) {
+		
+		WebDriver driver= new ChromeDriver();
+		driver.get("https://pf.com.pk/");
+		driver.manage().window().maximize();
+		
+		driver.findElement(By.className("applynow_btn")).click();
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("window.scrollBy(0, 350)", "");
+  
+	    driver.findElement(By.linkText("https://pf.com.pk/job/mid-level-sqa-engineer/")).click();
+	    
+	    js.executeScript("window.scrollBy(0, 350)", "");
+	    
+	    
+	    driver.findElement(By.cssSelector("input[value='Male']")).click();
+	    
+	    driver.findElement(By.className("")).sendKeys();
+	    driver.findElement(By.className("")).click();
+	    driver.findElement(By.className("")).click();
+	    driver.findElement(By.className("")).click();
+	    driver.findElement(By.className("")).click();
+	    driver.findElement(By.className("")).click();
+	    driver.findElement(By.className("")).click();
+	    driver.findElement(By.className("")).click();
+	    driver.findElement(By.className("")).click();
+	    driver.findElement(By.className("")).click();
+	    driver.findElement(By.className("")).click();
+	    driver.findElement(By.className("")).click();
+	    driver.findElement(By.className("")).click();
+	    driver.findElement(By.className("")).click();
+	    driver.findElement(By.className("")).click();
+	    driver.findElement(By.className("")).click();
+	    driver.findElement(By.className("")).click();
+	    driver.findElement(By.className("")).click();
+	    driver.findElement(By.className("")).click();
+	    
+	}
+
+}
