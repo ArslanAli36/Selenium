@@ -31,14 +31,6 @@ import io.appium.java_client.android.AndroidDriver;
 public class tour27_test {
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
 //	WebDriver driver;
 	static AndroidDriver driver;
 //	static AppiumDriver<MobileElement> driver;
